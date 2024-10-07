@@ -14,7 +14,7 @@ APT_PACKAGES=(
 )
 
 PIP_PACKAGES=(
-    "accelerate>=0.26.0"
+    "accelerate"
     #"package-2"
 )
 
