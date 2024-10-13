@@ -24,21 +24,21 @@ NODES=(
 	"https://github.com/MushroomFleet/DJZ-Nodes"
 	"https://github.com/Gourieff/comfyui-reactor-node"
 	"https://github.com/ltdrdata/ComfyUI-Impact-Pack"
-	"https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes"
+	#"https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes"
 	"https://github.com/rgthree/rgthree-comfy"
-	"https://github.com/crystian/ComfyUI-Crystools"
-	"https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
-	"https://github.com/giriss/comfy-image-saver"
+	#"https://github.com/crystian/ComfyUI-Crystools"
+	#"https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
+	#"https://github.com/giriss/comfy-image-saver"
 	"https://github.com/Fannovel16/comfyui_controlnet_aux"
 	"https://github.com/WASasquatch/was-node-suite-comfyui"
 	"https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
-	"https://github.com/melMass/comfy_mtb"
-	"https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
-	"https://github.com/sipherxyz/comfyui-art-venture"
-	"https://github.com/twri/sdxl_prompt_styler"
-	"https://github.com/hylarucoder/comfyui-copilot"
+	#"https://github.com/melMass/comfy_mtb"
+	#"https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
+	#"https://github.com/sipherxyz/comfyui-art-venture"
+	#"https://github.com/twri/sdxl_prompt_styler"
+	#"https://github.com/hylarucoder/comfyui-copilot"
 	"https://github.com/kijai/ComfyUI-KJNodes"
-	"https://github.com/KoreTeknology/ComfyUI-Universal-Styler"
+	#"https://github.com/KoreTeknology/ComfyUI-Universal-Styler"
 )
 
 WORKFLOWS=(
@@ -112,11 +112,11 @@ function provisioning_start() {
     source /opt/ai-dock/bin/venv-set.sh comfyui
 
     if provisioning_has_valid_hf_token; then
-        #UNET_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors")
-        #VAE_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors")
+        UNET_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors")
+        VAE_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors")
     else
-        #UNET_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/flux1-schnell.safetensors")
-        #VAE_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/ae.safetensors")
+        UNET_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/flux1-schnell.safetensors")
+        VAE_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/ae.safetensors")
         sed -i 's/flux1-dev\.safetensors/flux1-schnell.safetensors/g' /opt/ComfyUI/web/scripts/defaultGraph.js
     fi
 
