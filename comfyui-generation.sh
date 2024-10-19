@@ -25,7 +25,6 @@ NODES=(
 	"https://github.com/cubiq/ComfyUI_essentials"
 	"https://github.com/MushroomFleet/DJZ-Nodes"
 	"https://github.com/Gourieff/comfyui-reactor-node"
-	"https://github.com/ltdrdata/ComfyUI-Impact-Pack"
  	"https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
   	"https://github.com/chrisgoringe/cg-image-picker"
    	"https://github.com/nkchocoai/ComfyUI-SaveImageWithMetaData"
@@ -46,6 +45,7 @@ NODES=(
 	#"https://github.com/hylarucoder/comfyui-copilot"
 	"https://github.com/kijai/ComfyUI-KJNodes"
 	#"https://github.com/KoreTeknology/ComfyUI-Universal-Styler"
+ 	"https://github.com/ltdrdata/ComfyUI-Impact-Pack"
 )
 
 WORKFLOWS=(
