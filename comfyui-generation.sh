@@ -15,7 +15,7 @@ APT_PACKAGES=(
 
 PIP_PACKAGES=(
     "accelerate"
-    "comfyui-frontend-package"
+    #"comfyui-frontend-package"
 )
 
 NODES=(
