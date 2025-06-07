@@ -15,7 +15,10 @@ APT_PACKAGES=(
 
 PIP_PACKAGES=(
     "accelerate"
-    #"comfyui-frontend-package"
+)
+
+PIP_UPGRADE_PACKAGES=(
+    "comfyui-frontend-package"
 )
 
 NODES=(
@@ -134,6 +137,7 @@ function provisioning_start() {
     provisioning_get_apt_packages
     provisioning_get_nodes
     provisioning_get_pip_packages
+    provisioning_upgrade_pip_packages
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/ckpt" \
         "${CHECKPOINT_MODELS[@]}"
@@ -179,6 +183,12 @@ function provisioning_get_apt_packages() {
 function provisioning_get_pip_packages() {
     if [[ -n $PIP_PACKAGES ]]; then
             pip_install ${PIP_PACKAGES[@]}
+    fi
+}
+
+function provisioning_upgrade_pip_packages() {
+    if [[ -n $PIP_UPGRADE_PACKAGES ]]; then
+            pip_install ${PIP_PACKAGES[@]} --upgrade
     fi
 }
 
