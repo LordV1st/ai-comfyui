@@ -133,6 +133,8 @@ function provisioning_start() {
     provisioning_get_nodes
     provisioning_get_pip_packages
     provisioning_upgrade_pip_packages
+    provisioning_add_mapping_line
+    provisioning_ComfyUI_Update
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/ckpt" \
         "${CHECKPOINT_MODELS[@]}"
@@ -172,6 +174,13 @@ function pip_install() {
         fi
 }
 
+function provisioning_ComfyUI_Update() {
+if [ -d /opt/ComfyUI/custom_nodes/ComfyUI-Manager ]; then
+    cd /opt/ComfyUI/custom_nodes/ComfyUI-Manager
+    git pull
+fi
+}
+
 function provisioning_get_apt_packages() {
     if [[ -n $APT_PACKAGES ]]; then
             sudo $APT_INSTALL ${APT_PACKAGES[@]}
@@ -189,6 +198,12 @@ function provisioning_upgrade_pip_packages() {
             pip_install ${PIP_PACKAGES[@]} --upgrade
     fi
 }
+
+function provisioning_add_mapping_line() {
+    echo "storage_map["stable_diffusion/models/diffusion_models"]="/opt/ComfyUI/models/diffusion_models"" >> /opt/ai-dock/storage_monitor/etc/mappings.sh
+    echo "storage_map["stable_diffusion/models/text_encoders"]="/opt/ComfyUI/models/text_encoders"" >> /opt/ai-dock/storage_monitor/etc/mappings.sh
+}
+
 
 function provisioning_get_nodes() {
     for repo in "${NODES[@]}"; do
