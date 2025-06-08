@@ -71,6 +71,10 @@ CLIP_MODELS=(
 	#"https://huggingface.co/city96/t5-v1_1-xxl-encoder-gguf/resolve/main/t5-v1_1-xxl-encoder-Q8_0.gguf"
 )
 
+CLIPVISION_MODELS=(
+	"https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors"
+)
+
 LORA_MODELS=(
 	
 )
@@ -91,6 +95,7 @@ TEXT_MODELS=(
 
 DIFFUSION_MODELS=(
     "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_t2v_1.3B_fp16.safetensors"
+    "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_i2v_480p_14B_fp16.safetensors"
 )
 
 CONTROLNET_MODELS=(
@@ -162,6 +167,9 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/diffusion_models" \
         "${DIFFUSION_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/clip_vision" \
+        "${CLIPVISION_MODELS[@]}"
     provisioning_get_workflows
     provisioning_print_end
 }
@@ -203,6 +211,7 @@ function provisioning_add_mapping_line() {
     echo >> /opt/ai-dock/storage_monitor/etc/mappings.sh
     echo 'storage_map["stable_diffusion/models/diffusion_models"]="/opt/ComfyUI/models/diffusion_models"' >> /opt/ai-dock/storage_monitor/etc/mappings.sh
     echo 'storage_map["stable_diffusion/models/text_encoders"]="/opt/ComfyUI/models/text_encoders"' >> /opt/ai-dock/storage_monitor/etc/mappings.sh
+    echo 'storage_map["stable_diffusion/models/clip_vision"]="/opt/ComfyUI/models/clip_vision"' >> /opt/ai-dock/storage_monitor/etc/mappings.sh
 }
 
 
