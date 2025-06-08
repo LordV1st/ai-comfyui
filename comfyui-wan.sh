@@ -175,7 +175,7 @@ function pip_install() {
 }
 
 function provisioning_ComfyUI_Update() {
-if [ -d /opt/ComfyUI/custom_nodes/ComfyUI-Manager ]; then
+if [[ -d /opt/ComfyUI/custom_nodes/ComfyUI-Manager ]]; then
     cd /opt/ComfyUI/custom_nodes/ComfyUI-Manager
     git pull
 fi
