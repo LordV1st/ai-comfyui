@@ -201,8 +201,8 @@ function provisioning_upgrade_pip_packages() {
 
 function provisioning_add_mapping_line() {
     echo >> /opt/ai-dock/storage_monitor/etc/mappings.sh
-    echo '"storage_map["stable_diffusion/models/diffusion_models"]="/opt/ComfyUI/models/diffusion_models""' >> /opt/ai-dock/storage_monitor/etc/mappings.sh
-    echo '"storage_map["stable_diffusion/models/text_encoders"]="/opt/ComfyUI/models/text_encoders""' >> /opt/ai-dock/storage_monitor/etc/mappings.sh
+    echo 'storage_map["stable_diffusion/models/diffusion_models"]="/opt/ComfyUI/models/diffusion_models"' >> /opt/ai-dock/storage_monitor/etc/mappings.sh
+    echo 'storage_map["stable_diffusion/models/text_encoders"]="/opt/ComfyUI/models/text_encoders"' >> /opt/ai-dock/storage_monitor/etc/mappings.sh
 }
 
 
