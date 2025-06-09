@@ -22,33 +22,15 @@ PIP_UPGRADE_PACKAGES=(
 )
 
 NODES=(
-	"https://github.com/ltdrdata/ComfyUI-Manager"
+ "https://github.com/ltdrdata/ComfyUI-Manager"
+ "https://github.com/yolain/ComfyUI-Easy-Use"
+"https://github.com/kijai/ComfyUI-Florence2"
+"https://github.com/Fannovel16/ComfyUI-Frame-Interpolation"
+"https://github.com/kijai/ComfyUI-KJNodes"
+"https://github.com/Smirnov75/ComfyUI-mxToolkit"
+"https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
+"https://github.com/rgthree/rgthree-comfy"
   "https://github.com/city96/ComfyUI-GGUF"
-  #	"https://github.com/SeargeDP/ComfyUI_Searge_LLM"
-	#"https://github.com/cubiq/ComfyUI_essentials"
-	#"https://github.com/MushroomFleet/DJZ-Nodes"
-	#"https://github.com/Gourieff/comfyui-reactor-node"
- 	#"https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
-  #"https://github.com/chrisgoringe/cg-image-picker"
-  #"https://github.com/nkchocoai/ComfyUI-SaveImageWithMetaData"
-  #"https://github.com/Smirnov75/ComfyUI-mxToolkit"
-  #"https://github.com/edelvarden/ComfyUI-ImageMetadataExtension"
-	#"https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes"
-	#"https://github.com/rgthree/rgthree-comfy"
-	#"https://github.com/crystian/ComfyUI-Crystools"
-	#"https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
-	#"https://github.com/giriss/comfy-image-saver"
-	#"https://github.com/Fannovel16/comfyui_controlnet_aux"
-	#"https://github.com/WASasquatch/was-node-suite-comfyui"
-	#"https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
-	#"https://github.com/melMass/comfy_mtb"
-	#"https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
-	#"https://github.com/sipherxyz/comfyui-art-venture"
-	#"https://github.com/twri/sdxl_prompt_styler"
-	#"https://github.com/hylarucoder/comfyui-copilot"
-	#"https://github.com/kijai/ComfyUI-KJNodes"
-	#"https://github.com/KoreTeknology/ComfyUI-Universal-Styler"
- 	#"https://github.com/ltdrdata/ComfyUI-Impact-Pack"
 )
 
 WORKFLOWS=(
@@ -57,9 +39,6 @@ WORKFLOWS=(
 
 CHECKPOINT_MODELS=(
 	#"https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt"
-	#"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
-	#"https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
-	#"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
 )
 
 UNET_MODELS=(
@@ -93,8 +72,9 @@ TEXT_MODELS=(
 )
 
 DIFFUSION_MODELS=(
-    "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/blob/main/split_files/diffusion_models/wan2.1_t2v_14B_bf16.safetensors"
+    "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/blob/main/split_files/diffusion_models/wan2.1_t2v_14B_fp16.safetensors"
     "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_i2v_480p_14B_fp16.safetensors"
+    "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/blob/main/split_files/diffusion_models/wan2.1_i2v_720p_14B_fp16.safetensors"
 )
 
 CONTROLNET_MODELS=(
