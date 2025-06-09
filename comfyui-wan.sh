@@ -31,6 +31,11 @@ NODES=(
 "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
 "https://github.com/rgthree/rgthree-comfy"
   "https://github.com/city96/ComfyUI-GGUF"
+  "https://github.com/yuvraj108c/ComfyUI-Upscaler-Tensorrt
+"https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
+"https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+"https://github.com/pollockjj/ComfyUI-MultiGPU"
+
 )
 
 WORKFLOWS=(
