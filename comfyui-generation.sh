@@ -66,6 +66,7 @@ UNET_MODELS=(
 CLIP_MODELS=(
 	"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/clip_l.safetensors"
 	"https://huggingface.co/city96/t5-v1_1-xxl-encoder-gguf/resolve/main/t5-v1_1-xxl-encoder-Q8_0.gguf"
+ 	"https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn_scaled.safetensors"
 )
 
 LORA_MODELS=(
@@ -120,6 +121,7 @@ function provisioning_start() {
 
     if provisioning_has_valid_hf_token; then
         UNET_MODELS+=("https://huggingface.co/city96/FLUX.1-dev-gguf/resolve/main/flux1-dev-Q8_0.gguf")
+		UNET_MODELS+=("https://huggingface.co/lodestones/Chroma1-HD/resolve/main/Chroma1-HD.safetensors")
         VAE_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors")
     else
         UNET_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/flux1-schnell.safetensors")
